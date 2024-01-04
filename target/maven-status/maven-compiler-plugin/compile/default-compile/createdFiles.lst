@@ -2,6 +2,6 @@ org/example/Main.class
 com/upscode/config/CORSFilter.class
 com/upscode/service/ClienteService.class
 com/upscode/model/Cliente.class
-com/upscode/service/ClienteServiceImpl.class
 com/upscode/config/AppConfig.class
 com/upscode/api/ClienteResource.class
+com/upscode/data/ClienteDAO.class

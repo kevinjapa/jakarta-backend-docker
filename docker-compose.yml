@@ -62,7 +62,7 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /Users/paul-astudillo/datapg
+      device: /Users/kevin/datapg
 
 networks:
   datalogger_net:

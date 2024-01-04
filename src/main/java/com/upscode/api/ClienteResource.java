@@ -19,7 +19,7 @@ public class ClienteResource {
     @Produces(MediaType.APPLICATION_JSON)
 //    @Produces("application/json")
     public Response getCliente(){
-        List<Cliente> list= service.listAll();
+        List<Cliente> list= service.getAll();
         return Response.ok().status(Response.Status.OK).entity(list).build();
     }
     @POST
