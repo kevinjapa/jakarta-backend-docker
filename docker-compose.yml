@@ -19,7 +19,8 @@ services:
 
 
   srvwildfly:
-    image: ups/microdocker
+    image: japasesino/backenddocker
+
     container_name: srvwildfly
     hostname: srvwildfly
     environment:
@@ -49,8 +50,8 @@ services:
       - datalogger_net
 
   angular_frontend:
-    image: juandtap/angular-front
-    container_name: angular_frontend
+    image: japasesino/frontangularmsdocker
+    container_name: frontangularmsdocker
     ports:
       - 4200:4200
     networks:
@@ -62,7 +63,7 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /Users/kevin/datapg
+      device: /Users/kevinjapa/datapg
 
 networks:
   datalogger_net:
