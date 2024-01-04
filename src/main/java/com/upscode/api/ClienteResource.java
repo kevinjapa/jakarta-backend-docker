@@ -3,9 +3,8 @@ package com.upscode.api;
 import com.upscode.model.Cliente;
 import com.upscode.service.ClienteService;
 import jakarta.inject.Inject;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import java.util.List;
@@ -17,10 +16,18 @@ public class ClienteResource {
 
     @GET
     @Path("/all")
-    @Produces("application/json")
+    @Produces(MediaType.APPLICATION_JSON)
+//    @Produces("application/json")
     public Response getCliente(){
         List<Cliente> list= service.listAll();
         return Response.ok().status(Response.Status.OK).entity(list).build();
     }
-
+    @POST
+    @Path("newuser")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response saveClientes(Cliente cliente){
+        Cliente c= service.save(cliente);
+        return Response.ok().status(Response.Status.CREATED).entity(c).build();
+    }
 }
