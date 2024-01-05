@@ -50,7 +50,7 @@ services:
       - datalogger_net
 
   angular_frontend:
-    image: japasesino/frontangularmsdocker
+    image: pedro405/front2
     container_name: frontangularmsdocker
     ports:
       - 4200:4200
