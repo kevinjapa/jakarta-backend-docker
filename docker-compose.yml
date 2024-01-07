@@ -20,7 +20,6 @@ services:
 
   srvwildfly:
     image: japasesino/backenddocker
-
     container_name: srvwildfly
     hostname: srvwildfly
     environment:
@@ -63,7 +62,7 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /Users/kevinjapa/datapg
+      device: C:\Dev\voldocker
 
 networks:
   datalogger_net:
